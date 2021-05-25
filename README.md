@@ -21,7 +21,8 @@ A resort website which made totally using html , css , javascript , nodejs and m
 1) Install VSCODE with html , css , javascript extensions 
 2) Install Mono db community server along with Mongo Db Compass : https://www.mongodb.com/try/download/community
 3) Install Node js from : https://nodejs.org/en/download/
-4) Download the files and run in VS-Code Editor 
+4) Download the files from :- https://drive.google.com/drive/folders/1pvG5phLdouIeIprprpjHQiGvXGEW7f3e?usp=sharing   and run in VS-Code Editor 
+5) If the file is asking for permission you can request for it 💯
 
 
 **STEPS TO EXECUTE : - **
