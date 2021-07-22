@@ -13,7 +13,8 @@ A resort website which made totally using html , css , javascript , nodejs and m
 **TECHNOLOGIES : - **
 
 1) NODE - JS 
-2) MONGO - DB
+2) EXPRESS -JS
+3) MONGO - DB
 
 
 **SETUP : - **
