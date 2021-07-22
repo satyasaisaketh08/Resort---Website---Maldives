@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reviews</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9a7c44bca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/favicon.ico">
+    <style>
+    .middle-box{
+      width: 60%;
+      margin: auto;
+      padding: 3%;
+    }
+    label{
+      font-size: 17px;
+      font-family: sans-serif;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      text-decoration: underline;
+    }
+    input,textarea{
+      padding: 11px;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="nav-bar">
+      <h1 class="nav-heading">LA-Zuberia resort</h1>
+      <div>
+        <ul class="nav-bar-items">
+          <a href="/" class="nav-bar-links">
+            <li>Home</li>
+          </a>
+          <a href="/accomodation" class="nav-bar-links">
+            <li>Accomodation</li>
+          </a>
+          <a href="/offers" class="nav-bar-links">
+            <li>Offers</li>
+          </a>
+          <a href="/marriage-packs" class="nav-bar-links">
+            <li>Marraige packs</li>
+          </a>
+          <a href="/login" class="nav-bar-links">
+            <li>Login</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top-box">
+      <h2 class="heading">Write a Review</h2>
+    </div>
+
+    <br>
+    <hr width="90%">
+    <br>
+
+    <div class="middle-box">
+      <form class="" action="/reviews" method="post">
+        <label for="Name">Name</label>
+        <br><br>
+        <input type="text" name="Name" value="" placeholder="Name ..." size="35px">
+        <br><br>
+        <label for="Email">Email</label>
+        <br><br>
+        <input type="email" name="Email" value="" placeholder="Email ..." size="35px">
+        <br><br>
+        <label for="Review">Review</label>
+        <br><br>
+        <textarea name="Review" rows="8" cols="80" placeholder="Write your review here ..."></textarea>
+        <br><br>
+        <input type="submit" class="btn" value="Publish">
+      </form>
+    </div>
+
+    <div class="footer">
+      <a href="/about-us" class="footer-links">About us</a>
+      <a href="/facilities" class="footer-links">Facilities and services</a>
+      <a href="/contact-us" class="footer-links">Contact-us</a>
+      <a href="/carrers" class="footer-links">Careers</a>
+      <a href="/reviews" class="footer-links">Reviews</a>
+      <br>
+      <i class="fab fa-facebook footer-tags"></i>
+      <i class="fab fa-instagram footer-tags"></i>
+      <i class="fab fa-twitter footer-tags"></i>
+      <i class="far fa-envelope footer-tags"></i>
+      <p style="color:grey;margin-top:10px;">© 2021 LA ZUBERIA all rights reserved.</p>
+    </div>
+
+  </body>
+</html>

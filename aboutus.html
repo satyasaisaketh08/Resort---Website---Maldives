@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>About us</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d9a7c44bca.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="../images/favicon.ico">
+  <style>
+    body {
+  margin: 0;
+}
+
+.nav-bar {
+  background-color: white;
+  background-color: black;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.nav-heading {
+  margin: 0px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.nav-bar-items {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-right: 30px;
+}
+
+.nav-bar-links {
+  text-decoration: none;
+  color:white;
+  font-size: 18px;
+}
+
+.footer-tags {
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-tags:hover {
+  color: blue;
+}
+
+.footer-links {
+  text-decoration: none;
+  margin: 25px;
+  padding: 10px 0px 20px 0px;
+  color: white;
+  font-size: 17px;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  padding-top: 50px;
+  width: auto;
+  height: 200px;
+}
+
+a:hover {
+  color: #c70039;
+  transition: all 0.5s ease-in-out;
+}
+
+.about {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.image-1, .image-2, .image-3 {
+  height: 350px;
+  width: 350px;
+  border-radius: 5px 5px 0 0;
+}
+
+.image{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 20px;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+}
+
+.image:hover{
+  box-shadow: 0 16px 24px 0 rgba(0,0,0,0.5);
+  background-color: #f4eee8;
+}
+
+.description {
+  font-size: 15px;
+  padding : 0 20px 0 20px;
+}
+
+.btn {
+    font-size: 13px;
+    letter-spacing: 2px;
+    width: 75%;
+    margin: 0 20px 0 20px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+  background-color: #393e46;
+}
+
+.post{
+  color: grey;
+  font-size: 18px;
+}
+
+.team{
+  text-align: center;
+  padding: 10px 10px 0 10px;
+  font-size: 35px;
+  margin-bottom: 0;
+  font-family: serif;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="nav-bar">
+    <h1 class="nav-heading">LA-Zuberia resort</h1>
+    <div>
+      <ul class="nav-bar-items">
+        <a href="/" class="nav-bar-links">
+          <li>Home</li>
+        </a>
+        <a href="/accomodation" class="nav-bar-links">
+          <li>Accomodation</li>
+        </a>
+        <a href="/offers" class="nav-bar-links">
+          <li>Offers</li>
+        </a>
+        <a href="/marriage-packs" class="nav-bar-links">
+          <li>Marraige packs</li>
+        </a>
+        <a href="/login" class="nav-bar-links">
+          <li>Login</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="team">Our team</h2>
+
+  <div class="about">
+
+    <div class="image">
+
+      <img src="../images/saketh.png" alt="image" class="image-1">
+      <h2 class="name">Satya Sai Saketh Matury</h2>
+      <span class="post">Chairman</span>
+      <p class="description">The backbone behind the luxurious resort and the LA - Zuberia group and one of the leading business corporate.
+      </p>
+      <span class="email">satya.matury.19cse@bmu.edu.in</span>
+      <br><br>
+      <form class="" action="mailto:satya.matury.19cse@bmu.edu.in" method="post">
+        <input type="submit" value="Contact" class="btn">
+        <!-- <button type="button" name="button" class="btn">contact</button> -->
+      </form>
+
+
+    </div>
+
+    <div class="image">
+
+      <img src="../images/vikram.png" alt="image" class="image-2">
+
+      <h2 class="name">Vikram sai teja Appasani</h2>
+      <span class="post">Managing Director</span>
+      <p class="description">An MBA graduate from the univeristy of stanford.Serving as the MD la zuberia resorts maldives since 10 years.
+      </p>
+      <span class="email">vikram.appasani.19cse@bmu.edu.in</span>
+      <br><br>
+      <form class="" action="mailto:vikram.appasani.19cse@bmu.edu.in" method="post">
+        <input type="submit" value="Contact" class="btn">
+      </form>
+      <!-- <button type="button" name="button" class="btn">contact</button> -->
+
+    </div>
+
+    <div class="image">
+
+      <img src="../images/narasimha.png" alt="image" class="image-3">
+
+      <h2 class="name">Valluri jaitra Narsimha</h2>
+      <span class="post">Events Manager</span>
+      <p class="description">The man behind the wonderfull events held in LA zuberia and the marriage islands from ebrus institute of georgia .
+      </p>
+      <span class="email">valluri.narasimha.19cse@bmu.edu.in</span>
+      <br><br>
+      <form class="" action="mailto:valluri.narasimha.19cse@bmu.edu.in" method="post">
+        <input type="submit" value="Contact" class="btn">
+
+      </form>
+      <!-- <button type="button" name="button" class="btn">contact</button> -->
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <a href="/reviews" class="footer-links">Reviews</a>
+    <a href="/facilities" class="footer-links">Facilities and services</a>
+    <a href="/contact-us" class="footer-links">Contact-us</a>
+    <a href="/carrers" class="footer-links">Careers</a>
+    <br>
+    <i class="fab fa-facebook footer-tags"></i>
+    <i class="fab fa-instagram footer-tags"></i>
+    <i class="fab fa-twitter footer-tags"></i>
+    <i class="far fa-envelope footer-tags"></i>
+    <p style="color:grey;margin-top:10px;">© 2021 LA ZUBERIA all rights reserved.</p>
+  </div>
+
+
+</body>
+
+</html>

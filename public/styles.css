@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+}
+
+.reviews{
+  padding: 40px 0;
+  background: #f1f1f1;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: #6ab04c;
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.review{
+  background: #fff;
+  padding: 30px;
+}
+.review img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name1{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars{
+  color: #6ab04c;
+  margin-bottom: 20px;
+}
+.heading {
+  font-size: 22px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.btn {
+  padding: 12px;
+  width: 160px;
+  letter-spacing: 2px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  margin: 10px;
+}
+
+.top-box {
+  text-align: center;
+  padding: 3%;
+}
+
+.middle-box {
+  text-align: left;
+  padding:0 8% 0 5%;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-family: sans-serif;
+}
+
+.content {
+  color: #373640;
+  letter-spacing: 2px;
+  line-height: 20px;
+  font-size: 13px;
+}
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
+}
+.nav-bar {
+  background-color: white;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.nav-heading {
+  margin: 0px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.nav-bar-items {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+  list-style-type: none;
+  padding-right: 30px;
+}
+
+.nav-bar-links {
+  text-decoration: none;
+  color:white;
+  font-size: 18px;
+}
+
+.footer-tags {
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-tags:hover {
+  color: blue;
+}
+
+.footer-links {
+  text-decoration: none;
+  margin: 25px;
+  padding: 10px 0px 20px 0px;
+  color: white;
+  font-size: 17px;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  padding-top: 50px;
+  width: auto;
+  height: 200px;
+}
+
+a:hover {
+  color: #c70039;
+  transition: all 0.5s ease-in-out;
+}

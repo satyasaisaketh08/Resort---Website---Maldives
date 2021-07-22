@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reviews</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9a7c44bca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/favicon.ico">
+  </head>
+
+  <body>
+
+    <div class="nav-bar">
+      <h1 class="nav-heading">LA-Zuberia resort</h1>
+      <div>
+        <ul class="nav-bar-items">
+          <a href="../index.html" class="nav-bar-links">
+            <li>Home</li>
+          </a>
+          <a href="../accomodation/index.html" class="nav-bar-links">
+            <li>Accomodation</li>
+          </a>
+          <a href="../offers/index.html" class="nav-bar-links">
+            <li>Offers</li>
+          </a>
+          <a href="../marriage-packs/index.html" class="nav-bar-links">
+            <li>Marraige packs</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top-box">
+      <h2 class="heading">Reviews</h2>
+      <form action="/review" method="post">
+        <input type="submit" name="submit" value="Write a review" class="btn">
+      </form>
+    </div>
+
+    <br>
+    <hr width="90%">
+    <br>
+
+    <div class="middle-box">
+      <ul>
+        <% for(var x =0 ; x<reviews.length ; x++){%>
+        <li class="name"><%=reviews[x].name%></li>
+        <br>
+        <li class="content"><%=reviews[x].review%></li>
+        <br>
+        <hr>
+        <br>
+      <% } %>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <a href="#" class="footer-links">About us</a>
+      <a href="../facilities/index.html" class="footer-links">Facilities and services</a>
+      <a href="../contact-us/index.html" class="footer-links">Contact-us</a>
+      <a href="../carrers/index.html" class="footer-links">Careers</a>
+      <br>
+      <i class="fab fa-facebook footer-tags"></i>
+      <i class="fab fa-instagram footer-tags"></i>
+      <i class="fab fa-twitter footer-tags"></i>
+      <i class="far fa-envelope footer-tags"></i>
+      <p style="color:grey;margin-top:10px;">© 2021 LA ZUBERIA all rights reserved.</p>
+    </div>
+
+  </body>
+</html>

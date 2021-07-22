@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La-zuberia Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fontawesome icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1.5;
+    }
+
+    .contact-bg {
+      /* margin-top: 50px; */
+      height: 40vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(image/contact-bg.jpg);
+      /* background: #e93b81; */
+      /* background: white; */
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      text-align: center;
+      color: #fff;
+      /* color: black; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* border-bottom: 1px solid black; */
+      /* background-image: url("images/light.jpeg"); */
+    }
+
+    .contact-bg h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .contact-bg h2 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      padding: 0.4rem 0;
+      letter-spacing: 4px;
+    }
+
+    .line div {
+      margin: 0 0.2rem;
+    }
+
+    .line div:nth-child(1),
+    .line div:nth-child(3) {
+      height: 3px;
+      width: 70px;
+      /* background: #f7327a; */
+      background: white;
+      border-radius: 5px;
+    }
+
+    .line {
+      display: flex;
+      align-items: center;
+    }
+
+    .line div:nth-child(2) {
+      width: 10px;
+      height: 10px;
+      /* background: #f7327a; */
+      background: white;
+      border-radius: 50%;
+    }
+
+    .text {
+      font-weight: 300;
+      opacity: 0.9;
+    }
+
+    .contact-bg .text {
+      margin: 1.6rem 0;
+    }
+
+    .contact-body {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .contact-info {
+      margin: 2rem 0;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .contact-info span {
+      display: block;
+    }
+
+    .contact-info div {
+      margin: 0.8rem 0;
+      padding: 1rem;
+    }
+
+    .contact-info span .fas {
+      font-size: 2rem;
+      padding-bottom: 0.9rem;
+      /* color: #f7327a; */
+      color : black;
+    }
+
+    .contact-info div span:nth-child(2) {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    .contact-info .text {
+      padding-top: 0.4rem;
+
+    }
+
+    .contact-form {
+      padding: 2rem 0;
+      border-top: 1px solid #c7c7c7;
+    }
+
+    .contact-form form {
+      padding-bottom: 1rem;
+    }
+
+    .form-control {
+      width: 100%;
+      border: 1.5px solid #c7c7c7;
+      border-radius: 5px;
+      padding: 0.7rem;
+      margin: 0.6rem 0;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      outline: 0;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+    }
+
+    .contact-form form div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 0.6rem;
+    }
+
+    .send-btn {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #fff;
+      /* background: #f7327a; */
+      background: black;
+      border: none;
+      border-radius: 5px;
+      padding: 0.7rem 1.5rem;
+      cursor: pointer;
+      transition: all 0.4s ease;
+    }
+
+    .send-btn:hover {
+      opacity: 0.8;
+    }
+
+    .contact-form>div img {
+      width: 85%;
+    }
+
+    .contact-form>div {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-footer {
+      padding: 2rem 0;
+      background: #000;
+    }
+
+    .contact-footer h3 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.4rem;
+      transition: all 0.4s ease;
+    }
+
+    .social-links a:hover {
+      color: #f7327a;
+      border-color: #f7327a;
+    }
+
+    @media screen and (min-width: 768px) {
+      .contact-bg .text {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      .contact-bg .text {
+        width: 50%;
+      }
+
+      .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      .contact-info {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* copied css */
+
+    .nav-bar {
+      background-color: white;
+      background-color: #33313b;
+      color: #2978b5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .nav-heading {
+      margin: 0px;
+      letter-spacing: 2px;
+      font-weight: 300;
+      color: white;
+    }
+
+    .nav-bar-items {
+      display: flex;
+      width: 600px;
+      justify-content: space-between;
+      list-style-type: none;
+      padding-right: 20px;
+    }
+
+    .nav-bar-links {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="nav-bar">
+    <h1 class="nav-heading">LA-Zuberia resort</h1>
+    <div>
+      <ul class="nav-bar-items">
+        <a href="/" class="nav-bar-links">
+          <li>Home</li>
+        </a>
+        <a href="/accomodation" class="nav-bar-links">
+          <li>Accomodation</li>
+        </a>
+        <a href="/offers" class="nav-bar-links">
+          <li>Offers</li>
+        </a>
+        <a href="marriage-packs" class="nav-bar-links">
+          <li>Marraige packs</li>
+        </a>
+        <a href="/login" class="nav-bar-links">
+          <li>Login</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="contact-bg">
+      <h3>Get in Touch with Us</h3>
+      <h2>Contact Us</h2>
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p class="text">Need something? Here we are😍<br />Always waiting to help you. Just a click away </p>
+    </div>
+
+    <!-- <hr> -->
+
+
+    <div class="contact-body">
+      <div class="contact-info">
+        <div>
+          <span><i class="fas fa-mobile-alt"></i></span>
+          <span>Phone No.</span>
+          <span class="text">987-654-3210</span>
+        </div>
+        <div>
+          <span><i class="fas fa-envelope-open"></i></span>
+          <span>E-mail</span>
+          <p class="text"><a style="text-decoration: none;" href="mailto:vallurijaithranarasimha@gmail.com">La-zuberia@gmail.com</a></p>
+        </div>
+        <div>
+          <span><i class="fas fa-map-marker-alt"></i></span>
+          <span>Address</span>
+          <span class="text">LA-Zuberia Resorts,P.O. Box 2188, Mudhdhoo Island, Baa Atoll, Maldives</span>
+        </div>
+        <div>
+          <span><i class="fas fa-clock"></i></span>
+          <span>Opening Hours</span>
+          <span class="text">We are available 24 / 7 </span>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form action="javascript:sendmail()" method="post">
+          <div>
+            <h4>👇Please Fill Out Your Details Here👇 </h4><br />
+          </div>
+          <div>
+            <input type="text" name="Name" id="Name" class="form-control" placeholder="Enter your Name">
+            <input type="text" name="Subject" id="Subject" class="form-control" placeholder="Enter your subject">
+          </div>
+          <div>
+            <input type="email" name="Sender" id="Sender" class="form-control" placeholder="E-mail">
+            <input type="text" name="Phone" id="Phone" pattern="[0-9]{10}" class="form-control" placeholder="Phone">
+          </div>
+          <textarea rows="5" placeholder="Message" name="Message" id="Message" class="form-control"></textarea>
+          <input type="submit" class="send-btn" value="send message" onclick="Redirect()" ;>
+        </form>
+
+        <div>
+          <img src="image/contact-png.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.0492551683196!2d73.16127426432811!3d5.254939546187401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b6ac3e8c7ac42eb%3A0x6c53de9afe7f73a6!2sFonimagoodhoo!5e0!3m2!1sen!2sin!4v1621726352400!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="contact-footer">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" target="_Blank" class="fab fa-facebook-f"></a>
+        <a href="https://www.twitter.com/" target="_Blank" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/" target="_Blank" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/" target="_Blank" class="fab fa-linkedin"></a>
+        <a href="https://www.youtube.com/" target="_Blank" class="fab fa-youtube"></a>
+      </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+  <script>
+
+    function Redirect() {
+      setTimeout(function () {
+        window.location = "http://localhost:3000";
+      }, 2000);
+    }
+
+    function sendmail() {
+
+      var name = $('#Name').val();
+      var email = $('#Sender').val();
+      var subject = $('#Subject').val();
+      var message = $('#Message').val();
+      var body = $('#Phone').val();
+
+      var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Phone: ' + body + '<br>Message: ' + message;
+
+
+      Email.send({
+        SecureToken: "fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+        To: 'vallurijaithranarasimha@gmail.com',
+        From: "demooptimalweb@gmail.com",
+        Subject: "New message on contact from " + name,
+        Body: Body
+      }).then(
+        message => {
+
+          if (message == 'OK') {
+            alert('Your mail has been send. Thank you for connecting.');
+          } else {
+            console.error(message);
+            alert('There is error at sending message. ')
+
+          }
+
+        }
+      );
+
+
+
+    }
+  </script>
+  </script>
+
+
+</body>
+
+</html>

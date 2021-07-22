@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Special offers</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d9a7c44bca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="../images/favicon.ico">
+  <style>
+    body {
+  margin: 0px;
+  background-color: #e4fbff;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.top-small {
+  background-color: black;
+  height: 25px;
+  padding: 17px 17px 10px 0;
+  text-align: center;
+  font-family: sans-serif -a--medium;
+  font-size: 14px;
+}
+
+.top-small-box1 {
+  display: inline-block;
+  margin-left: 60%;
+}
+
+.top-small-links {
+  color: white;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.top-small-links:hover {
+  color: #7eca9c;
+}
+
+.top-small-nav-links:hover {
+  color: #7eca9c;
+}
+
+.top-small-nav-links {
+  text-decoration: none;
+  color: white;
+  margin-left: 100px;
+  margin-right: 60px;
+  font-size: 22px;
+}
+
+.resort-nav-image {
+  height: 550px;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0%;
+  top: 6.2%;
+  opacity: 100%;
+}
+
+.top-small-nav-box1 {
+  z-index: 1;
+}
+
+.hotel-name {
+  font-size: 45px;
+  position: absolute;
+  padding: 30px;
+  color: white;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-small-nav {
+  text-align: center;
+  height: 550px;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.empty {
+  height: 15px;
+  width: 10px;
+}
+
+.offers {
+  text-align: left;
+  width: 70%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.offer-1,.offer-2,.offer-3,.offer-4,.offer-5{
+  display: flex;
+  margin-bottom: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offer-1-description,.offer-2-description,.offer-3-description,.offer-4-description,.offer-5-description {
+  width: 50%;
+  line-height: 30px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-top: -30px;
+}
+
+.offer-heading{
+  font-size: 30px;
+  font-weight: lighter;
+  margin-bottom: 50px;
+}
+
+.know-more{
+  margin-top: 13px;
+  padding: 10px;
+  background: None;
+  outline: None;
+  border: None;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-weight: 100;
+  text-decoration:underline;
+}
+
+.know-more:hover{
+  width: 205px;
+  length : 205px;
+  color: green;
+}
+
+.popup-0,.popup-1,.popup-2,.popup-3,.popup-4{
+  position: fixed;
+  top : 50%;
+  left : 50%;
+  transform: translate(-50%,-50%) scale(0);
+  width: 800px;
+  max-height: 750px;
+  overflow: auto;
+  background-color: white;
+  z-index: 10;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
+  line-height: 29px;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.popup-0.aactive,.popup-1.aactive,.popup-2.aactive,.popup-3.aactive,.popup-4.aactive{
+  transform: translate(-50%,-50%) scale(1);
+  pointer-events: all;
+  transition: all 1s ease-in-out;
+}
+
+.popup-header{
+  display: inline-block;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.close-button{
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+  top : 15px;
+  /* background-color: White; */
+  border: None;
+  font-size: 20px;
+  font-weight: lighter;
+  background: None;
+  border-radius: 100%;
+  background-color: hsla(0, 100%, 90%, 0.3);
+  width: 30px;
+  height: 30px;
+}
+
+.close-button:hover{
+  /* background-color: green; */
+  color: #7b113a;
+  background-color: #bdd2b6;
+}
+
+.popup-footer{
+  padding: 25px;
+  text-align: left;
+}
+
+.popup-image{
+  width: 800px;
+  height: 400px;
+}
+
+.popup-heading{
+  font-size: 37px;
+}
+
+.overlay{
+  opacity: 0;
+  position: fixed;
+  top : 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  transition: all 1s ease-in-out;
+
+}
+
+.overlay.active{
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  pointer-events: all;
+  transition: all 1s ease-in-out;
+}
+
+
+
+.footer-tags {
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  margin: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-tags:hover {
+  color: blue;
+}
+
+.footer-links {
+  text-decoration: none;
+  margin: 25px;
+  padding: 10px 0px 20px 0px;
+  color: white;
+  font-size: 17px;
+}
+
+.footer {
+  background-color: black;
+  text-align: center;
+  padding-top: 50px;
+  width: auto;
+  height: 200px;
+}
+
+a:hover {
+  color: #c70039;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="top-small">
+    <a href="https://www.worldometers.info/coronavirus/" class="top-small-links">Covid 19 updates</a>
+    <div class="top-small-box1">
+      <a href="http://www.emro.who.int/nutrition/news/nutrition-advice-for-adults-during-the-covid-19-outbreak.html" class="top-small-links">Immunity Builders</a>
+      <a href="https://blog.wego.com/covid-testing-centres-in-india/" class="top-small-links">Free rapid test</a>
+    </div>
+  </div>
+
+  <div class="top-small-nav">
+    <div class="top-small-nav-box1">
+      <div class="empty">
+
+      </div>
+      <a href="/" class="top-small-nav-links">Home</a>
+      <a href="/accomodation" class="top-small-nav-links">Accomodation</a>
+      <a href="/marriage-packs" class="top-small-nav-links">Marraige Packs</a>
+      <a href="/login" class="top-small-nav-links">Login</a>
+      <img src="../images/special_offers.jpeg" alt="Resort image" class="resort-nav-image">
+      <h1 class="hotel-name">LA ZUBERIA RESORTS <br><br> Special offers </h1>
+    </div>
+  </div>
+
+  <div class="offers">
+
+    <div class="offer-1">
+      <img src="../images/offers-1.jpeg" alt="offer-1-image" class="offer-1-image">
+
+      <div class="offer-1-description">
+        <h2 class="offer-heading">4.4 Special</h2>
+        <p>Book your stay with LA-Zuberia, enjoy your second night with our compliments Exclusively for LA-Zuberia Gold members, embark on a memorable journey with LA-Zuberia Hotels and Resorts in Thailand with our amazing deal.
+        </p>
+        <button type="button" name="button" class="know-more">Know more +</button>
+      </div>
+
+    </div>
+
+    <div class="offer-2">
+      <img src="../images/offers-2.jpeg" alt="offer-2-image" class="offer-2-image">
+
+      <div class="offer-2-description">
+        <h2 class="offer-heading">Stay and Wander</h2>
+        <p>Wander with LA-Zuberia. Rediscover your journey with curated dining and shopping adventures. Book now for your stay between 1 April to 31 October 2021.
+        </p>
+        <button type="button" name="button" class="know-more">Know more +</button>
+      </div>
+
+    </div>
+
+    <div class="offer-3">
+      <img src="../images/offers-3.jpeg" alt="offer-3-image" class="offer-3-image">
+
+      <div class="offer-3-description">
+        <h2 class="offer-heading">Work from Anywhere – Day Use Offer</h2>
+        <p>Revitalise your work habits with a welcome change of scenery – even just for a day. Work remotely amid breathtaking settings, such as a picturesque white-sand beach in Phuket or lush greenery in the heart of Bangkok.
+        </p>
+        <button type="button" name="button" class="know-more">Know more +</button>
+      </div>
+
+    </div>
+
+    <div class="offer-4">
+      <img src="../images/offers-4.jpeg" alt="offer-4-image" class="offer-4-image">
+
+      <div class="offer-4-description">
+        <h2 class="offer-heading">Work from Anywhere – Extended Stay Offer</h2>
+        <p>Savour the luxury of workation and find your home away from home at LA-Zuberia Hotels and Resorts across Thailand. Enjoy extensive savings and a range of benefits the longer you stay.
+        </p>
+        <button type="button" name="button" class="know-more">Know more +</button>
+      </div>
+
+    </div>
+
+    <div class="offer-5">
+      <img src="../images/offers-5.jpeg" alt="offer-5-image" class="offer-5-image">
+
+      <div class="offer-5-description">
+        <h2 class="offer-heading">Bed and Breakfast Plus</h2>
+        <p>Enjoy superior comfort and superior value with our new Bed & Breakfast Plus package – including daily breakfast and complimentary dining credit or spa credit to spend during your stay. This special promotion is available on all room types
+          and includes free Wi-Fi.
+        </p>
+        <button type="button" name="button" class="know-more">Know more +</button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="popup-0">
+
+    <div class="popup-header">
+
+      <img src="../images/offers-1.jpeg" alt="offers-images" class="popup-image">
+
+      <button type="button" name="button" class="close-button">&times;</button>
+
+    </div>
+
+    <div class="popup-footer">
+
+      <p>Book your stay with LA-Zuberia, enjoy your second night with our compliments
+        <br>
+        <br>
+        Exclusively for LA-Zuberia Gold members, embark on a memorable journey with LA-Zuberia Hotels and Resorts in Thailand with our amazing deal. Enjoy special savings on your stay and pay for one night when you book for two nights. Got a reason to stay
+        longer? Double your saving and book for four nights but pay for two.
+        <br><br>
+        Owners of dogs and cats also benefit from savings on overnight pet care, with an exclusive ‘three nights for the price of two’ offer at Thonglor Pet Hospital.
+        <br><br>
+        Make sure to reserve your room on 4 April to receive complimentary insurance (for COVID-19 and personal accidents) from Cigna Insurance.
+        <br><br>
+        Booking period: 4 - 30 April 2021
+        Stay period: 4 April – 31 July 2021
+        <br>
+      <h2 class="popup-heading">Terms and conditions</h2>
+      <ul>
+        <li>Full payment is required at the time of booking</li>
+        <br>
+        <li>As your health and safety is our primary concern, reservations can be amended by 15 May with applicable extra charge (if any) subject to the room rate of the day.
+          Reservations can be canceled by 15 May 2021</li>
+        <br>
+        <li>This offer is not applicable with other LA-Zuberia Gold benefits</li>
+        <br>
+        <li>This offer is not applicable with other promotions and cannot be exchanged for cash</li>
+        <br>
+        <li>COVID-19 Insurance is valid for 2 months and Personal Accident Insurance (PA) is valid for 3 months for bookings made on 4 April 2021 with payment completed between 00.01 and 23:59</li>
+        <br>
+      </ul>
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="popup-1">
+
+    <div class="popup-header">
+
+      <img src="../images/offers-2.jpeg" alt="offers-images" class="popup-image">
+
+      <button type="button" name="button" class="close-button">&times;</button>
+
+    </div>
+
+    <div class="popup-footer">
+
+      <p>Book your stay with LA-Zuberia, enjoy your second night with our compliments
+        <br>
+        <br>
+        Exclusively for LA-Zuberia Gold members, embark on a memorable journey with LA-Zuberia Hotels and Resorts in Thailand with our amazing deal. Enjoy special savings on your stay and pay for one night when you book for two nights. Got a reason to stay
+        longer? Double your saving and book for four nights but pay for two.
+        <br><br>
+        Owners of dogs and cats also benefit from savings on overnight pet care, with an exclusive ‘three nights for the price of two’ offer at Thonglor Pet Hospital.
+        <br><br>
+        Make sure to reserve your room on 4 April to receive complimentary insurance (for COVID-19 and personal accidents) from Cigna Insurance.
+        <br><br>
+        Booking period: 4 - 30 April 2021
+        Stay period: 4 April – 31 July 2021
+        <br>
+      <h2>Terms and conditions</h2>
+      <ul>
+        <li>Full payment is required at the time of booking</li>
+        <br>
+        <li>As your health and safety is our primary concern, reservations can be amended by 15 May with applicable extra charge (if any) subject to the room rate of the day.
+          Reservations can be canceled by 15 May 2021</li>
+        <br>
+        <li>This offer is not applicable with other LA-Zuberia Gold benefits</li>
+        <br>
+        <li>This offer is not applicable with other promotions and cannot be exchanged for cash</li>
+        <br>
+        <li>COVID-19 Insurance is valid for 2 months and Personal Accident Insurance (PA) is valid for 3 months for bookings made on 4 April 2021 with payment completed between 00.01 and 23:59</li>
+        <br>
+      </ul>
+      </p>
+
+    </div>
+
+  </div>
+
+  <div class="popup-2">
+
+    <div class="popup-header">
+
+      <img src="../images/offers-3.jpeg" alt="offers-images" class="popup-image">
+
+      <button type="button" name="button" class="close-button">&times;</button>
+
+    </div>
+
+    <div class="popup-footer">
+
+      <p>Book your stay with LA-Zuberia, enjoy your second night with our compliments
+        <br>
+        <br>
+        Exclusively for LA-Zuberia Gold members, embark on a memorable journey with LA-Zuberia Hotels and Resorts in Thailand with our amazing deal. Enjoy special savings on your stay and pay for one night when you book for two nights. Got a reason to stay
+        longer? Double your saving and book for four nights but pay for two.
+        <br><br>
+        Owners of dogs and cats also benefit from savings on overnight pet care, with an exclusive ‘three nights for the price of two’ offer at Thonglor Pet Hospital.
+        <br><br>
+        Make sure to reserve your room on 4 April to receive complimentary insurance (for COVID-19 and personal accidents) from Cigna Insurance.
+        <br><br>
+        Booking period: 4 - 30 April 2021
+        Stay period: 4 April – 31 July 2021
+        <br>
+      <h2>Terms and conditions</h2>
+      <ul>
+        <li>Full payment is required at the time of booking</li>
+        <br>
+        <li>As your health and safety is our primary concern, reservations can be amended by 15 May with applicable extra charge (if any) subject to the room rate of the day.
+          Reservations can be canceled by 15 May 2021</li>
+        <br>
+        <li>This offer is not applicable with other LA-Zuberia Gold benefits</li>
+        <br>
+        <li>This offer is not applicable with other promotions and cannot be exchanged for cash</li>
+        <br>
+        <li>COVID-19 Insurance is valid for 2 months and Personal Accident Insurance (PA) is valid for 3 months for bookings made on 4 April 2021 with payment completed between 00.01 and 23:59</li>
+        <br>
+      </ul>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="popup-3">
+
+    <div class="popup-header">
+
+      <img src="../images/offers-4.jpeg" alt="offers-images" class="popup-image">
+
+      <button type="button" name="button" class="close-button">&times;</button>
+
+    </div>
+
+    <div class="popup-footer">
+
+      <p>Book your stay with LA-Zuberia, enjoy your second night with our compliments
+        <br>
+        <br>
+        Exclusively for LA-Zuberia Gold members, embark on a memorable journey with LA-Zuberia Hotels and Resorts in Thailand with our amazing deal. Enjoy special savings on your stay and pay for one night when you book for two nights. Got a reason to stay
+        longer? Double your saving and book for four nights but pay for two.
+        <br><br>
+        Owners of dogs and cats also benefit from savings on overnight pet care, with an exclusive ‘three nights for the price of two’ offer at Thonglor Pet Hospital.
+        <br><br>
+        Make sure to reserve your room on 4 April to receive complimentary insurance (for COVID-19 and personal accidents) from Cigna Insurance.
+        <br><br>
+        Booking period: 4 - 30 April 2021
+        Stay period: 4 April – 31 July 2021
+        <br>
+      <h2>Terms and conditions</h2>
+      <ul>
+        <li>Full payment is required at the time of booking</li>
+        <br>
+        <li>As your health and safety is our primary concern, reservations can be amended by 15 May with applicable extra charge (if any) subject to the room rate of the day.
+          Reservations can be canceled by 15 May 2021</li>
+        <br>
+        <li>This offer is not applicable with other LA-Zuberia Gold benefits</li>
+        <br>
+        <li>This offer is not applicable with other promotions and cannot be exchanged for cash</li>
+        <br>
+        <li>COVID-19 Insurance is valid for 2 months and Personal Accident Insurance (PA) is valid for 3 months for bookings made on 4 April 2021 with payment completed between 00.01 and 23:59</li>
+        <br>
+      </ul>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="popup-4">
+
+    <div class="popup-header">
+
+      <img src="../images/offers-5.jpeg" alt="offers-images" class="popup-image">
+
+      <button type="button" name="button" class="close-button">&times;</button>
+
+    </div>
+
+    <div class="popup-footer">
+
+      <p>Book your stay with LA-Zuberia, enjoy your second night with our compliments
+        <br>
+        <br>
+        Exclusively for LA-Zuberia Gold members, embark on a memorable journey with LA-Zuberia Hotels and Resorts in Thailand with our amazing deal. Enjoy special savings on your stay and pay for one night when you book for two nights. Got a reason to stay
+        longer? Double your saving and book for four nights but pay for two.
+        <br><br>
+        Owners of dogs and cats also benefit from savings on overnight pet care, with an exclusive ‘three nights for the price of two’ offer at Thonglor Pet Hospital.
+        <br><br>
+        Make sure to reserve your room on 4 April to receive complimentary insurance (for COVID-19 and personal accidents) from Cigna Insurance.
+        <br><br>
+        Booking period: 4 - 30 April 2021
+        Stay period: 4 April – 31 July 2021
+        <br>
+      <h2>Terms and conditions</h2>
+      <ul>
+        <li>Full payment is required at the time of booking</li>
+        <br>
+        <li>As your health and safety is our primary concern, reservations can be amended by 15 May with applicable extra charge (if any) subject to the room rate of the day.
+          Reservations can be canceled by 15 May 2021</li>
+        <br>
+        <li>This offer is not applicable with other LA-Zuberia Gold benefits</li>
+        <br>
+        <li>This offer is not applicable with other promotions and cannot be exchanged for cash</li>
+        <br>
+        <li>COVID-19 Insurance is valid for 2 months and Personal Accident Insurance (PA) is valid for 3 months for bookings made on 4 April 2021 with payment completed between 00.01 and 23:59</li>
+        <br>
+      </ul>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="overlay">
+
+  </div>
+
+
+  <div class="footer">
+    <a href="/about-us" class="footer-links">About us</a>
+    <a href="/facilities" class="footer-links">Facilities and services</a>
+    <a href="/contact-us" class="footer-links">Contact-us</a>
+    <a href="/carrers" class="footer-links">Careers</a>
+    <a href="/reviews" class="footer-links">Reviews</a>
+    <br>
+    <i class="fab fa-facebook footer-tags"></i>
+    <i class="fab fa-instagram footer-tags"></i>
+    <i class="fab fa-twitter footer-tags"></i>
+    <i class="far fa-envelope footer-tags"></i>
+    <p style="color:grey;margin-top:10px;">© 2021 LA ZUBERIA all rights reserved.</p>
+  </div>
+
+
+
+  <script>
+    var open = document.querySelectorAll('.know-more');
+var over = document.querySelector('.overlay');
+var close = document.querySelectorAll('.close-button');
+
+open[0].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-0');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+open[1].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-1');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+open[2].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-2');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+open[3].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-3');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+open[4].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-4');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+close[0].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-0');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+close[1].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-1');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+close[2].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-2');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+close[3].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-3');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+close[4].addEventListener('click', function() {
+  var popup = document.querySelector('.popup-4');
+  popup.classList.toggle('aactive');
+  over.classList.toggle('active');
+});
+
+over.addEventListener('click', function() {
+  var popup = document.querySelector('.popup-0');
+  if (popup.classList.contains('aactive')) {
+    popup.classList.toggle('aactive');
+    over.classList.toggle('active');
+  }
+});
+
+over.addEventListener('click', function() {
+  var popup = document.querySelector('.popup-1');
+  if (popup.classList.contains('aactive')) {
+    popup.classList.toggle('aactive');
+    over.classList.toggle('active');
+  }
+});
+
+over.addEventListener('click', function() {
+  var popup = document.querySelector('.popup-2');
+  if (popup.classList.contains('aactive')) {
+    popup.classList.toggle('aactive');
+    over.classList.toggle('active');
+  }
+});
+
+over.addEventListener('click', function() {
+  var popup = document.querySelector('.popup-3');
+  if (popup.classList.contains('aactive')) {
+    popup.classList.toggle('aactive');
+    over.classList.toggle('active');
+  }
+});
+
+over.addEventListener('click', function() {
+  var popup = document.querySelector('.popup-4');
+  if (popup.classList.contains('aactive')) {
+    popup.classList.toggle('aactive');
+    over.classList.toggle('active');
+  }
+});
+
+  </script>
+</body>
+
+</html>

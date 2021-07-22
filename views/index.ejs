@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reviews</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9a7c44bca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../images/favicon.ico">
+  </head>
+
+  <body>
+    <div class="nav-bar">
+      <h1 class="nav-heading">LA-Zuberia resort</h1>
+      <div>
+        <ul class="nav-bar-items">
+          <a href="/" class="nav-bar-links">
+            <li>Home</li>
+          </a>
+          <a href="/accomodation" class="nav-bar-links">
+            <li>Accomodation</li>
+          </a>
+          <a href="/offers" class="nav-bar-links">
+            <li>Offers</li>
+          </a>
+          <a href="/marriage-packs" class="nav-bar-links">
+            <li>Marraige packs</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="reviews">
+      <div class="inner">
+        <h1>Top Reviews</h1>
+        <div class="border"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="review">
+              <img src="images/p1.png" alt="">
+              <div class="name1">Revanth</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+
+              <p>
+                Old beach charm! Gorgeous room with fabulous view but the best was the staff. I particularly thank Emily at the desk. What a gracious and knowledgeable hostess. Our room was beyond expectations, and the housekeeping staff was efficient, attentive. I have been to larger or newer (this one is on historic registry) but do not recall a better or accommodating staff. Best beach resort on the planet. LOVE our visits there.
+
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="review">
+              <img src="images/p2.png" alt="">
+              <div class="name1">Veronica</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p>
+                This is our 3rd or 4th stay at this resort. We have always been pleased with the rooms, service and friendly atmosphere. The bar and restraunt area ,renovations of the lobby are stunning. The decor although modern blends well with the older section of the hotel and has made the lobby a welcoming, relaxing place for drinks and dining. It seems to now be a very popular place for locals as well as tourists.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="review">
+              <img src="images/p3.png" alt="">
+              <div class="name1">Sanjana</div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+
+              <p>
+                My husband and I came for our honeymoon and we had the best time! Everyone was so kind and welcoming and helpful to us. The room was amazing as was the food. My husband really enjoyed the golf course as did I even though I didn't play. I will be recommending The LA-Zuberia to everyone I talk to and we will definitely be coming back!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top-box">
+      <form action="/review" method="post">
+        <input type="submit" name="submit" value="Write a review" class="btn">
+      </form>
+    </div>
+
+    <br>
+    <hr width="90%">
+    <br>
+
+    <div class="middle-box">
+      <ul>
+        <% for(var x =0 ; x<reviews.length ; x++){%>
+        <li class="name"><%=reviews[x].name%></li>
+        <br>
+        <li class="content"><%=reviews[x].review%></li>
+        <br>
+        <hr>
+        <br>
+      <% } %>
+      </ul>
+    </div>
+    <div class="footer">
+      <a href="/about-us" class="footer-links">About us</a>
+      <a href="/facilities" class="footer-links">Facilities and services</a>
+      <a href="/contact-us" class="footer-links">Contact-us</a>
+      <a href="/carrers" class="footer-links">Careers</a>
+      <br>
+      <i class="fab fa-facebook footer-tags"></i>
+      <i class="fab fa-instagram footer-tags"></i>
+      <i class="fab fa-twitter footer-tags"></i>
+      <i class="far fa-envelope footer-tags"></i>
+      <p style="color:grey;margin-top:10px;">© 2021 LA ZUBERIA all rights reserved.</p>
+    </div>
+  </body>
+  </html>

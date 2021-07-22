@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home - LA Zuberia Resort</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9a7c44bca.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico">
+    <style>
+        body {
+    margin: 0px;
+    /* background-color: #e4fbff; */
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.top-small {
+    background-color: black;
+    height: 25px;
+    padding: 17px 17px 10px 0;
+    text-align: center;
+    font-family: sans-serif -a--medium;
+    font-size: 14px;
+}
+
+.top-small-box1 {
+    display: inline-block;
+    margin-left: 60%;
+}
+
+.top-small-links {
+    color: white;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.top-small-links:hover {
+    color: #7eca9c;
+}
+
+.top-small-nav-links {
+    text-decoration: none;
+    color: black;
+    /* color: white; */
+    margin-left: 110px;
+    margin-right: 55px;
+    font-size: 22px;
+}
+
+.resort-nav-image {
+    height: 700px;
+    opacity: 95%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.top-small-nav-box1 {
+    padding: 17px;
+    /* background-image: url("../images/cover_image.jpg"); */
+    /* opacity: 90%; */
+}
+
+.hotel-name {
+    font-size: 40px;
+    position: absolute;
+    /* color: white; */
+    top: 23%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.top-small-nav {
+    text-align: center;
+    height: 550px;
+}
+
+.hotel-description {
+    text-align: center;
+    /* background-color: #e4fbff; */
+    background-color: white;
+    color: black;
+    padding: 30px;
+    padding-bottom: 100px;
+}
+
+.description-table {
+    padding: 0px 10px 0px 10px;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+}
+
+.description-table-data-1 {
+    padding: 0px 50px 0px 170px;
+    border-right: 3px solid black;
+}
+
+.description-table-data-2 {
+    padding: 0px 170px 0px 50px;
+}
+
+.experience-image {
+    width: 100%;
+    height: 600px;
+    z-index: 0;
+}
+
+.experience-p1 {
+    position: absolute;
+    width: 450px;
+    top: 1310px;
+    left: 100px;
+    font-size: 26px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.experience-p2 {
+    position: absolute;
+    width: 450px;
+    top: 1420px;
+    left: 100px;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 520;
+    z-index: 1;
+}
+
+.accomodation {
+    /* background-color: #e4fbff; */
+    background-color: white;
+    padding: 50px;
+}
+
+.accomodation-image {
+    margin-left: 65%;
+    height: 550px;
+    padding-bottom: 25px;
+    border-radius: 10%;
+}
+
+.accomodation-heading {
+    display: inline-block;
+    position: absolute;
+    left: 17%;
+    top: 230%;
+    font-size: 30px;
+}
+
+.accomodation-details {
+    position: absolute;
+    left: 7%;
+    top: 240%;
+    width: 38%;
+    text-align: left;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.dining-image {
+    margin-left: 7%;
+    height: 550px;
+    padding: 45px 0 45px 0;
+    border-radius: 15%;
+}
+
+.dining-heading {
+    position: absolute;
+    top: 312%;
+    right: 22%;
+    font-size: 30px;
+}
+
+.dining-details {
+    position: absolute;
+    top: 322%;
+    width: 38%;
+    right: 5%;
+    text-align: left;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.wedding-image {
+    margin-left: 63%;
+    height: 550px;
+    width: 450px;
+    padding-bottom: 60px;
+    padding-top: 55px;
+    border-radius: 15%;
+}
+
+.wedding-heading {
+    display: inline-block;
+    position: absolute;
+    left: 17%;
+    top: 400%;
+    font-size: 30px;
+}
+
+.wedding-details {
+    position: absolute;
+    left: 7%;
+    top: 410%;
+    width: 38%;
+    text-align: left;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+hr {
+    border-top: 10px dotted;
+    width: 10%;
+}
+
+.final {
+    background-image: url(../images/final.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+}
+
+.final-image {
+    height: 500px;
+    width: 100%;
+    /* opacity: 90%; */
+}
+
+.final-details {
+    position: absolute;
+    top: 469%;
+    font-size: 24px;
+    font-weight: 200px;
+    width: 500px;
+    right: 32%;
+    text-align: center;
+    line-height: 38px;
+}
+
+.footer-tags {
+    background: white;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-tags:hover {
+    color: blue;
+}
+
+.footer-links {
+    text-decoration: none;
+    margin: 25px;
+    padding: 10px 0px 20px 0px;
+    color: white;
+    font-size: 17px;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+    width: auto;
+    height: 200px;
+}
+
+a:hover {
+    color: #c70039;
+}
+    </style>
+</head>
+
+<body>
+    <div class="top-small">
+        <a href="https://www.worldometers.info/coronavirus/" class="top-small-links">Covid 19 updates</a>
+        <div class="top-small-box1">
+            <a href="http://www.emro.who.int/nutrition/news/nutrition-advice-for-adults-during-the-covid-19-outbreak.html" class="top-small-links">Immunity Builders</a>
+            <a href="https://blog.wego.com/covid-testing-centres-in-india/" class="top-small-links">Free rapid test</a>
+        </div>
+    </div>
+    <div class="top-small-nav">
+        <div class="top-small-nav-box1">
+            <a href="/accomodation" class="top-small-nav-links">Accomodation</a>
+            <a href="/offers" class="top-small-nav-links">Offers</a>
+            <a href="/marriage-packs" class="top-small-nav-links">Marraige Packs</a>
+            <a href="/login" class="top-small-nav-links">Login</a>
+        </div>
+        <img src="images/cover_image.jpg" alt="Resort image" class="resort-nav-image">
+        <h1 class="hotel-name">LA ZUBERIA RESORTS</h1>
+    </div>
+    <div class="hotel-description">
+        <h1 style="margin:0px 0px 50px 0px; padding-top:30px">LA ZUBERIA Maldives</h1>
+        <table class="description-table">
+            <tr>
+                <td class="description-table-data-1">
+                    <p>
+                        In a tropical island paradise, gracious Thai hospitality meets unparalleled luxury and natural beauty.
+                    </p>
+                    <p>
+                        On Mudhdhoo Island in Baa Atoll – Maldives’ first, LA ZUBERIA Maldives is just 35 minutes by seaplane from the capital city, Malé or a 25-minute domestic flight from Dharavandhoo Airport.
+                        <br>
+                    </p>
+                </td>
+                <td class="description-table-data-2">
+                    <p>
+                        Luxurious Maldives hotel on the beach and over-water villas and residences await guests seeking island adventure, fine dining and relaxation.
+                    </p>
+                    <p>
+                        Book your stay with LA ZUBERIA , enjoy your night with our compliments Exclusively, embark on a memorable journey with LA ZUBERIA Hotels and Resorts in Maldives with our amazing deals.
+
+                        <br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="experience">
+        <img src="images/experience.jpg" alt="beach" class="experience-image">
+        <p class="experience-p1">Experiences that linger, often forever.</p>
+        <p class="experience-p2">A honeymoon of your dreams at a romantic resort in Maldives. Exclusive benefits await. Luxuriate in your Maldives Water Bungalow with the Indian Ocean unfolding before you
+        </p>
+    </div>
+    <div class="accomodation">
+        <img src="images/accomodation.jpeg" alt="accomodation" class="accomodation-image">
+        <h1 class="accomodation-heading"><strong>Accomodation</strong></h1>
+        <p class="accomodation-details">Select your perfect private paradise from a collection of beach and over-water villas and residences.
+            <br> 5-star resort in the Maldives with elegant Thai interiors, contemporary conveniences and butler service, luxurious beach retreats await at LA-Zuberia Maldives.
+        </p>
+    </div>
+    <hr>
+    <div class="dining">
+        <img src="images/dining.jpeg" alt="dining image" class="dining-image">
+        <h1 class="dining-heading"><strong>Dining</strong></h1>
+        <p class="dining-details">Culinary artistry meets barefoot luxury with a variety of fine dining offerings, from international buffet feasts to fresh seafood and authentic Thai delicacies.
+            <br> Experience ‘Borderless Dining’ in incredible settings around the island.
+        </p>
+    </div>
+    <hr>
+    <div class="wedding">
+        <img src="images/wedding.jpeg" alt="wedding-image" class="wedding-image">
+        <h1 class="wedding-heading"><strong>Wedding</strong></h1>
+        <p class="wedding-details">Moments are to be chershied forever...... with all the loved ones at a lovely venue the
+            <strong>LA ZUBERIA MALDIVES</strong>
+        </p>
+    </div>
+    <div class="final">
+        <img src="images/final.jpeg" alt="trees" class="final-image">
+        <p class="final-details"><strong>MAKE YOUR PLANS TO GET AMAZED AND HAVE THE FEEL ONE SHOULD HAVE !!</strong></p>
+    </div>
+    <div class="footer">
+        <a href="/about-us" class="footer-links">About us</a>
+        <a href="/facilities" class="footer-links">Facilities and services</a>
+        <a href="/contact-us" class="footer-links">contact-us</a>
+        <a href="/carrers" class="footer-links">Careers</a>
+        <a href="/reviews" class="footer-links">Reviews</a>
+        <br>
+        <i class="fab fa-facebook footer-tags"></i>
+        <i class="fab fa-instagram footer-tags"></i>
+        <i class="fab fa-twitter footer-tags"></i>
+        <i class="far fa-envelope footer-tags"></i>
+        <p style="color:grey;margin-top:10px;">© 2021 LA ZUBERIA all rights reserved.</p>
+    </div>
+</body>
+
+</html>
